@@ -3,6 +3,7 @@ import random
 import time 
 
 tk = Tk()
+#The title is placed at the top of the sqare with the below line. 
 tk.title("Bounce Game")
 tk.resizable(0,0)
 tk.wm_attributes("-topmost", 1)
