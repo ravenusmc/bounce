@@ -45,13 +45,24 @@ class Ball:
     if pos[2] >= self.canvas_width:
       self.x = -3
 
+class Paddle:
+  def __init__(self, canvas, color):
+    self.canvas = canvas
+    self.id = canvas.create_rectangle(0,0,100,10, fill=color)
+    self.canvas.move(self.id, 200, 300)
+
+  def draw(self):
+    pass
+
 
 ####### Classes End #######################
 
+paddle = Paddle(canvas, "red")
 ball = Ball(canvas, 'blue')
 
 #The below code will allow the board to be displayed longer than a split second.
 while 1:
+  paddle.draw()
   ball.draw()
   tk.update_idletasks()
   tk.update()
