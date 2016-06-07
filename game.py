@@ -16,6 +16,8 @@ canvas.pack()
 #This line tells tkinter to init itself for the animation in the game. 
 tk.update()
 
+############# Classes start ############
+
 #Creating the ball class. 
 class Ball:
   def __init__(self,canvas,color):
@@ -42,6 +44,9 @@ class Ball:
       self.x = 3
     if pos[2] >= self.canvas_width:
       self.x = -3
+
+
+####### Classes End #######################
 
 ball = Ball(canvas, 'blue')
 
